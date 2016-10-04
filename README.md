@@ -1,5 +1,5 @@
 # LobCodingChallenge
-This is a challenge I completed for the company Lob where I used their API to send a letter to the local U.S. representative of a given address. This program sends a letter to the local state representative of the address given to the program
+This is a challenge I completed for the company Lob where I used their API to send a letter to the local U.S. representative of a given address. 
 
 Prereqs to running the program:
 1. Download and install Python 2.7
