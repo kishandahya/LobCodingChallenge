@@ -6,14 +6,14 @@ import lob
 def main():
     parser = argparse.ArgumentParser(
         description='This program sends a letter to the local state representative of the ' +
-                    'address given as a command line argument',
+                    'address given to the program',
         usage = 'python LobCodingChallenge.py "Kishan Dahya" "555 Glenrock Avenue" "Los Angeles" "CA" "90024" ' +
                '"This is a test letter for Lob\'s coding challenge. Thank you legislator."')
     parser.add_argument('name', help='The name of the person sending the letter')
     parser.add_argument('address1', help='The address from which the letter will be sent')
     parser.add_argument('--address2', help='Optional argument for address line 2 for apt numbers, gate codes, etc')
     parser.add_argument('city', help='The city from which the letter will be sent')
-    parser.add_argument('state', help='The state from which the letter will be sent')
+    parser.add_argument('state', help='The state from which the letter will be sent.  Must be the 2 letter postal abbreviation')
     parser.add_argument('zip_code', help='The zip code from which the letter will be sent')
     parser.add_argument('message', help='The actual body of the letter to be sent to the representative. It must ' +
                                         'be less than 200 words long\n\n')
@@ -32,6 +32,7 @@ def main():
         response = requests.request("GET", google_request)
         create_letter(args.message, response.json(), from_address)
     except Exception as error:
+        # prints the help if any Exception is caught and the type of error
         parser.print_help()
         print('\n')
         print('You got this error: ' + repr(error))
