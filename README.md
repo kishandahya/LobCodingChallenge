@@ -10,6 +10,7 @@ Prereqs to running the program:
 3. Run following commands in your terminal of choice. 
 	1. `pip install argparse`
 	2. `pip install lob`
+4. Download the program
 
 Now you should be ready to use the program! Please don't hesitate to contact me for any information on how to run it or the code itself.
 
@@ -18,13 +19,12 @@ Example of the command to type in terminal:
 
 positional arguments:
 
-1.  name                 The name of the person sending the letter
-2.  address1             The address from which the letter will be sent
-3.  city                 The city from which the letter will be sent
-4.  state                The state from which the letter will be sent. Must be the 2 letter postal abbreviation
-5.  zip_code             The zip code from which the letter will be sent
-6.  message              The actual body of the letter to be sent to the
-                       representative. It must be less than 200 words long
+1.  name :               The name of the person sending the letter
+2.  address1 :           The address from which the letter will be sent
+3.  city :               The city from which the letter will be sent
+4.  state :              The state from which the letter will be sent. Must be the 2 letter postal abbreviation
+5.  zip_code :           The zip code from which the letter will be sent
+6.  message :            The actual body of the letter to be sent to the representative. It must be less than 200 words long
 
 optional arguments:
 
